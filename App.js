@@ -23,9 +23,9 @@ const reducer = (state = initialState, action) => {
 const store = createStore(reducer)
 
 export default class App extends Component {
-  render() {
+  render() {  {/* ONLY COMPONENTS INSIDE PROVIDER CAN ACCESS STORE/REDUX */}
     return (
-       <Provider store={store}> {/* ONLY COMPONENTS INSIDE PROVIDER CAN ACCESS STORE/REDUX */}
+       <Provider store={store}> 
         <View style={{ flex: 1, backgroundColor: 'red' }}>
           <CounterApp />
         </View>   
