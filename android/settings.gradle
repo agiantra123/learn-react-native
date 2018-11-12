@@ -1,0 +1,3 @@
+rootProject.name = 'bottomtabnavigator'
+
+include ':app'
