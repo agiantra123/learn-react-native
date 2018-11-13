@@ -6,7 +6,7 @@ App features:
 - navigation between tab
 - shifting
 
-I recommend you to use materialtoptabnavigator, not this
+I recommend you to use materialtoptabnavigator, not this one
 
 ## Libraries
 
