@@ -12,7 +12,7 @@ class BookScreen extends Component {
   render() {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text> BookScreen </Text>
+        <Text style={{ fontSize: 20, color: 'green', marginBottom: 10 }}> BookScreen </Text>
         <ProductList products={books} press={this.props.addItemToCart} />
       </View>
     )

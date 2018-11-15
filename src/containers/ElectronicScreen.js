@@ -12,7 +12,7 @@ class ElectronicScreen extends Component {
   render() {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text> ElectronicScreen </Text>
+        <Text style={{ fontSize: 20, color: 'green', marginBottom: 10 }}> ElectronicScreen </Text>
         <ProductList products={electronics} press={this.props.addItemToCart} />
       </View>
     )
