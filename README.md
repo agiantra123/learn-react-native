@@ -2,7 +2,7 @@
 
 Using react-native init
 
-## Feature:
+App features:
 
 -Get build model of device
 
