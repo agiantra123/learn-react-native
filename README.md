@@ -3,8 +3,7 @@
 Using react-native init
 
 App features:
-
--Get build model of device
+- get build model of device
 
 ## More Readings
 
