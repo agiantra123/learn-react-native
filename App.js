@@ -10,6 +10,7 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 
 import ExampleToast from './src/nativemodules/ExampleToast'
+import ExampleDevice from './src/nativemodules/ExampleDevice'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -21,6 +22,7 @@ const instructions = Platform.select({
 export default class App extends Component {
   componentDidMount() {
     ExampleToast.show('Awesome', ExampleToast.LONG);
+    ExampleDevice.getDeviceName((err, model) => console.log('ERROR: ' + err, 'BUILD MODEL: ' + model)) // callback
   }
   render() {
     return (
