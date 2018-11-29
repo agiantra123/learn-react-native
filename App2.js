@@ -6,6 +6,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 const styles = StyleSheet.create({
   container: {
@@ -22,6 +23,14 @@ const styles = StyleSheet.create({
   imageAppIntroSlider: {
     width: 120,
     height: 120,
+  },
+  buttonCircle: {
+    width: 40,
+    height: 40,
+    backgroundColor: 'rgba(0, 0, 0, .2)',
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 
@@ -58,12 +67,48 @@ const slides = [
   }
 ];
 
-export default class App extends Component {
+export default class App2 extends Component {
   constructor(props) {
     super(props)
     this.state = {
       showRealApp: false
     }
+  }
+  _renderPrevButton = () => {
+    return (
+      <View style={styles.buttonCircle}>
+        <Icon
+          name="md-arrow-round-back"
+          color="rgba(255, 255, 255, .9)"
+          size={24}
+          style={{ backgroundColor: 'transparent' }}
+        />
+      </View>
+    );
+  }
+  _renderNextButton = () => {
+    return (
+      <View style={styles.buttonCircle}>
+        <Icon
+          name="md-arrow-round-forward"
+          color="rgba(255, 255, 255, .9)"
+          size={24}
+          style={{ backgroundColor: 'transparent' }}
+        />
+      </View>
+    );
+  }
+  _renderDoneButton = () => {
+    return (
+      <View style={styles.buttonCircle}>
+        <Icon
+          name="md-checkmark"
+          color="rgba(255, 255, 255, .9)"
+          size={24}
+          style={{ backgroundColor: 'transparent' }}
+        />
+      </View>
+    );
   }
   _onDone = () => {
     // User finished the introduction. Show real app through navigation or simply by controlling state
@@ -80,6 +125,9 @@ export default class App extends Component {
       return <AppIntroSlider 
                 slides={slides} 
                 hidePagination={false} 
+                renderPrevButton={this._renderPrevButton}
+                renderDoneButton={this._renderDoneButton}
+                renderNextButton={this._renderNextButton}
                 onDone={this._onDone} 
                 showPrevButton={true}
                 showSkipButton={true}
