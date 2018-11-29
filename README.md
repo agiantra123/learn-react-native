@@ -11,3 +11,4 @@
 ## Tips:
 1. Do not forget to add some codes to android/build.gradle and android/app/build.gradle (https://github.com/ivpusic/react-native-image-crop-picker#android-1)
 2. Do not forget to add permissions to manifest (https://github.com/ivpusic/react-native-image-crop-picker#android-1)
+3. You can use the other library from rn community (https://github.com/react-community/react-native-image-picker)
